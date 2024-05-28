@@ -1,0 +1,18 @@
+#quiz-content {
+    /* visibility: hidden; */
+    display: none;
+    background-color: rgb(138, 225, 81);
+}
+
+body {
+    background-color: rgb(255, 157, 157);
+    /* align-items: center; */
+    text-align: center;
+    
+}
+
+#quiz-buttons {
+    /* flex-direction: row-reverse; */
+    display: flex;
+    justify-content: space-around;
+}
