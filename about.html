@@ -7,33 +7,25 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <header class="sticky top-0 z-50">
-        <nav class="px-[40px] py-4 bg-white">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center">
-                    <!-- Name -->
-                    <div class="text-lg font-bold hover:text-gray-300">
-                        <a href="/">William Saulnier</a>
-                    </div>
-
-                    <!-- Links -->
-                    <div class="space-x-4 ml-8">
-                        <a href="/about.html" class="hover:text-gray-300">About</a>
-                        <a href="/portfolio.html" class="hover:text-gray-300">Portfolio</a>
-                        <a href="/blog.html" class="hover:text-gray-300">Blog</a>
-                        <a href="/resume.html" class="hover:text-gray-300">Resume</a>
-                    </div>
+    <header class="fixed inset-x-0 top-0 z-50 bg-gray-800 bg-opacity-75 backdrop-blur">
+        <nav class="p-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="text-white text-lg font-bold">
+                    <a href="/index.html">William Saulnier</a>
                 </div>
-                
-
-                <!-- Buttons -->
+                <div>
+                    <a href="/about.html" class="text-white px-4 py-2 rounded mr-2 hover:bg-transparent hover:border hover:border-white">About</a>
+                    <a href="/portfolio.html" class="text-white px-4 py-2 rounded mr-2 hover:bg-transparent hover:border hover:border-white">Portfolio</a>
+                    <a href="/blog.html" class="text-white px-4 py-2 rounded mr-2 hover:bg-transparent hover:border hover:border-white">Blog</a>
+                    <a href="/resume.html" class="text-white px-4 py-2 rounded mr-2 hover:bg-transparent hover:border hover:border-white">Resume</a>
+                </div>
                 <div class="flex items-center">
-                    <button class="mr-4">
+                    <button class="text-white mr-4">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m8.485-8.485h-1M4.515 12h-1m15.364 4.95l-.707-.707M6.343 6.343l-.707-.707m12.728 12.728l-.707-.707M6.343 17.657l-.707-.707M12 5a7 7 0 100 14 7 7 0 000-14z" />
                         </svg>
                     </button>
-                    <a href="https://github.com/wsau2" class="mr-4" target="_blank">
+                    <a href="https://github.com/wsau2" class="text-white mr-4" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.263.82-.582 0-.287-.01-1.046-.015-2.053-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.835 2.807 1.305 3.492.997.108-.775.42-1.305.763-1.605-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.468-2.38 1.235-3.22-.123-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.983-.398 3.003-.403 1.02.005 2.047.137 3.006.403 2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.24 2.873.118 3.176.77.84 1.233 1.91 1.233 3.22 0 4.61-2.804 5.62-5.475 5.92.43.372.823 1.102.823 2.222 0 1.606-.015 2.898-.015 3.293 0 .322.217.698.825.58C20.565 21.795 24 17.297 24 12c0-6.63-5.37-12-12-12z"/>
                         </svg>
@@ -44,43 +36,11 @@
         </nav>
     </header>
     <main>
-        <!-- Hero Element -->
-        <section class="bg-black h-96 flex flex-col items-center justify-center text-center">
-            <h1 class="text-white text-5xl font-bold">William Saulnier</h1>
-            <h2 class="text-white text-2xl mt-4">Software Developer | CS @ University of Massachusetts</h2>
-            <div class="mt-4 space-x-4 flex justify-center">
-                <a class="bg-green-500 text-white px-4 py-2 rounded transition duration-300 ease-in-out transform hover:bg-green-700 hover:scale-105" href="mailto:wsaulnier@umass.edu">Contact</a>
-                <a class="bg-green-500 text-white px-4 py-2 rounded transition duration-300 ease-in-out transform hover:bg-green-700 hover:scale-105" download href="assets/Resume2025.pdf">Resume</a>
-                <a class="bg-green-500 text-white px-4 py-2 rounded transition duration-300 ease-in-out transform hover:bg-green-700 hover:scale-105" href="https://linkedin.com/in/william-saulnier" target="_blank">LinkedIn</a>
-            </div>
-
-        </section>
-
-        <!-- Main Content -->
         <section class="bg-gray-100 py-32">
             <div class="container mx-auto px-4">
-                <!-- Welcome and Introduction -->
-                <div class="flex items-center space-x-4">
-                    <img src="assets/william-saulnier.jpeg" class="w-lg h-lg" alt="William Saulnier">
-                    <p class="text-lg"></p>
-                        My name is William Saulnier. I am an undergraduate Computer Science Major (BS) at <a href="https://www.cics.umass.edu/" target="_blank" class="text-blue-500 hover:underline">University of Massachusetts Amherst</a>.
-                    </p>
-                </div>
+                <!-- About -->
+                <h1 class="text-3xl font-bold mb-4">About</h1>
                 
-                
-
-                
-
-                <!-- Contact -->
-                <div>
-                    <a href="mailto:wsaulnier@umass.edu" class="bg-green-500 text-white px-4 py-2 rounded mr-2">Let's Work</a>
-                    <a href="/pages/resume.html" class="bg-blue-500 text-white px-4 py-2 rounded">Resume</a>
-                </div>
-
-                <!-- Buttons -->
-                <div class="flex justify-center mt-8">
-                    <a href="https://umass.edu"><img src="https://suobset.github.io/finechive-helper/88x31/umass.png"></a>
-                </div>
                 
             </div>
         </section>
