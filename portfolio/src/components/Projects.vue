@@ -4,12 +4,15 @@ import ProjectCard from './ProjectCard.vue';
 
 <template>
     <section id="projects">
-        <div>
+        <div class="my-10">
             <div class="flex justify-center">
                 <h2 class="text-3xl font-bold tracking-tighter">Projects</h2>
             </div>
-            <ProjectCard/>
-            <ProjectCard/>
+            <div class="flex flex-col space-y-5 my-5">
+                <ProjectCard/>
+                <ProjectCard/>
+                <ProjectCard/>
+            </div>
         </div>
     </section>
 </template>
