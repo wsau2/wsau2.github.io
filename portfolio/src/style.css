@@ -1,2 +1,9 @@
 @import "tailwindcss";
 
+:root {
+    --muted-foreground: 0 0% 45.1%;
+}
+
+.muted-text {
+    color: hsl(var(--muted-foreground));
+}

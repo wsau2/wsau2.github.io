@@ -1,13 +1,16 @@
 <script setup lang="ts">
+import ProjectCard from './ProjectCard.vue';
 </script>
 
 <template>
-    <section id="projects-section">
-        <h2>Projects</h2>
-        <p>Project1</p>
-        <p>Project2</p>
-        <p>Project3</p>
-        <p>Project4</p>
+    <section id="projects">
+        <div>
+            <div class="flex justify-center">
+                <h2 class="text-3xl font-bold tracking-tighter">Projects</h2>
+            </div>
+            <ProjectCard/>
+            <ProjectCard/>
+        </div>
     </section>
 </template>
 
