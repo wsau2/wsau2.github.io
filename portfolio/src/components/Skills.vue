@@ -72,7 +72,7 @@ const filteredSkills = computed(() =>
 
         <!-- Skill Cards -->
         <div class="flex justify-center">
-            <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 max-w-4xl">
+            <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 max-w-xl">
                 <SkillCard
                     v-for="skill in filteredSkills"
                     :key="skill.name"

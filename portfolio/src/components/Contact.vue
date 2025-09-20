@@ -7,7 +7,7 @@
             <div class="flex justify-center">
                 <h2 class="text-3xl font-bold tracking-tighter">Get in Touch</h2>
             </div>
-            <p>Please contact me directly at <a class="underline" href="mailto:wsaulnier1004@gmail.com">wsaulnier1004@gmail.com</a> or through this form.</p>
+            <p class="muted-text text-center">Please contact me directly at <a class="underline" href="mailto:wsaulnier1004@gmail.com">wsaulnier1004@gmail.com</a> or through this form.</p>
             <form class="flex flex-col">
                 <input name="senderEmail" type="text" class="border border-gray-200 rounded-lg h-14 px-4" placeholder="Your Email"></input>
                 <textarea name="message" class="border border-gray-200 rounded-lg my-3 h-52 p-4" placeholder="Your Message"></textarea>
