@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Job from './Job.vue';
-import KubotekPhoto from '../assets/Saulnier-William-Sunset-250410-1913.jpg'
-import TriPhoto from '../assets/triathlon-will-photo.jpg'
+import UMassPhoto from '../assets/UMass.png'
+import UNHPhoto from '../assets/UNH.png'
 </script>
 
 <template>
@@ -10,13 +10,26 @@ import TriPhoto from '../assets/triathlon-will-photo.jpg'
             <h2 class="text-xl font-bold">Education</h2>
             <Job
                 company="University of Massachusetts Amherst"
-                role="Software Engineer"
-                date="Jan 2024 - Present"
-                :image="KubotekPhoto"
+                role="Bachelor of Computer Science"
+                date="2023 - 2025"
+                :image="UMassPhoto"
                 :bullets="[
                     'GPA 3.68/4',
                     'Major in Computer Science',
-                    'Deans List'
+                    'Deans List: Spring 2024, Spring 2025, Fall 2025'
+                ]"
+            />
+
+            <Job
+                company="University of Massachusetts Amherst"
+                role="Bachelor of Computer Science"
+                date="2021 - 2023"
+                :image="UNHPhoto"
+                :bullets="[
+                    'GPA 3.75/4',
+                    'Major in Computer Science',
+                    'Vice President of UNH Upsilon Pi Epsilon',
+                    'UNH SEDS (Students for the Exploration and Development of Space)',
                 ]"
             />
 

@@ -46,7 +46,7 @@ function leave(el: Element) {
         <div class="flex">
             <!-- Image -->
             <div class="flex-none">
-                <span class="relative flex shrink-0 overflow-hidden rounded-full border size-12 m-auto">
+                <span class="relative flex shrink-0 overflow-hidden rounded-full border size-12 m-auto border-black/20">
                     <img :src="props.image" class="aspect-square h-full w-full object-contain"/>
                 </span>
             </div>

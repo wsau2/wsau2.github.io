@@ -4,6 +4,8 @@ import About from './components/About.vue'
 import WorkExperience from './components/WorkExperience.vue';
 import Education from './components/Education.vue';
 import Projects from './components/Projects.vue';
+import Skills from './components/Skills.vue';
+import Contact from './components/Contact.vue';
 import { onMounted } from 'vue';
 
 onMounted(() => {
@@ -24,6 +26,8 @@ onMounted(() => {
     <WorkExperience class="fade-blur"/>
     <Education class="fade-blur"/>
     <Projects class="fade-blur"/>
+    <Skills class="fade-blur"/>
+    <Contact class="fade-blur"/>
   </main>
 </template>
 
