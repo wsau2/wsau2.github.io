@@ -9,7 +9,7 @@ const props = defineProps<Props>();
 </script>
 
 <template>
-<div class="w-full">
+<div class="w-[100px]">
     <div class="flex flex-col items-center justify-center p-3 sm:p-4 bg-gray-100 rounded-lg border border-gray-200 hover:bg-gray-200 transition-colors w-full h-24 sm:h-28 w-full">
         <span class="text-xs text-center w-full ">{{ props.skill }}</span>
         <!-- <component :is="props.icon" class="w-6 h-6 mt-2" /> -->

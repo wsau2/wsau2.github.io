@@ -37,6 +37,7 @@ const skills = [
   { name: "TDD", category: "Practices", icon: "VueIcon" },
 
   { name: "Git", category: "Tools", icon: "VueIcon" },
+  { name: "Super long name", category: "Tools", icon: "VueIcon" },
 ];
 
 // Computed array of skills for the selected category
@@ -54,7 +55,7 @@ const filteredSkills = computed(() =>
       </div>
 
       <!-- Category Select -->
-      <div class="flex gap-3 justify-center">
+      <div class="flex flex-wrap gap-3 justify-center">
         <button
           v-for="category in categories"
           :key="category"
@@ -72,15 +73,42 @@ const filteredSkills = computed(() =>
 
         <!-- Skill Cards -->
         <div class="flex justify-center">
-            <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 max-w-xl">
+          <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 max-w-xl">
                 <SkillCard
-                    v-for="skill in filteredSkills"
+                    v-for="(skill, index) in filteredSkills"
                     :key="skill.name"
                     :skill="skill.name"
                     :icon="VueIcon"
+                    class="skill-card"
+                    :style="{ animationDelay: `${index * 100}ms` }"
                 />
-            </div>
+          </div>
         </div>
     </div>
   </section>
 </template>
+
+<style scoped>
+.skill-card {
+  animation-name: animation-fade-in;
+  animation-duration:0.5s;
+  animation-timing-function: ease;
+  animation-delay: 0ms;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-fill-mode: both;
+  animation-play-state: running;
+}
+
+@keyframes animation-fade-in {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+</style>
