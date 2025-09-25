@@ -3,7 +3,7 @@ import type { DefineComponent } from 'vue';
 
 interface Props {
     skill: string,
-    icon: DefineComponent
+    icon: DefineComponent | string
 }
 const props = defineProps<Props>();
 </script>

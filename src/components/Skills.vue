@@ -19,7 +19,7 @@ const skills = [
   { name: "Node.js", category: "Backend", icon: NodeJSIcon },
   { name: "TypeScript", category: "Backend", icon: TypeScriptIcon },
   { name: "Python", category: "Backend", icon: PythonIcon },
-  { name: "SQL", category: "Backend", icon: "VueIcon" },
+  { name: "SQL", category: "Backend", icon: VueIcon },
   { name: "PostgreSQL", category: "Backend", icon: "VueIcon" },
   { name: "REST APIs", category: "Backend", icon: "VueIcon" },
 
@@ -28,7 +28,7 @@ const skills = [
   { name: "HTML5", category: "Frontend", icon: "VueIcon" },
   { name: "CSS3", category: "Frontend", icon: "VueIcon" },
   { name: "TailwindCSS", category: "Frontend", icon: "VueIcon" },
-  { name: "Vue", category: "Frontend", icon: "VueIcon" },
+  { name: "Vue", category: "Frontend", icon: VueIcon },
   { name: "Responsive Design", category: "Frontend", icon: "VueIcon" },
 
   { name: "Docker", category: "DevOps", icon: "VueIcon" },
