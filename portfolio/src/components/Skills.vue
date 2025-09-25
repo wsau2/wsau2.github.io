@@ -1,7 +1,12 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
 import SkillCard from "./SkillCard.vue";
-import VueIcon from "../assets/icons/vue.svg"
+import VueIcon from "../assets/icons/vue.svg?component"
+
+// Backend
+import NodeJSIcon from "../assets/icons/nodejs.svg?component"
+import TypeScriptIcon from '../assets/icons/typescript.svg?component'
+import PythonIcon from '../assets/icons/python.svg?component'
 
 // the currently selected category
 const selected = ref("Backend");
@@ -11,9 +16,9 @@ const categories = ["Backend", "Frontend", "DevOps", "Practices", "Tools"];
 
 
 const skills = [
-  { name: "Node.js", category: "Backend", icon: "VueIcon" },
-  { name: "TypeScript", category: "Backend", icon: "VueIcon" },
-  { name: "Python", category: "Backend", icon: "VueIcon" },
+  { name: "Node.js", category: "Backend", icon: NodeJSIcon },
+  { name: "TypeScript", category: "Backend", icon: TypeScriptIcon },
+  { name: "Python", category: "Backend", icon: PythonIcon },
   { name: "SQL", category: "Backend", icon: "VueIcon" },
   { name: "PostgreSQL", category: "Backend", icon: "VueIcon" },
   { name: "REST APIs", category: "Backend", icon: "VueIcon" },
@@ -78,7 +83,7 @@ const filteredSkills = computed(() =>
                     v-for="(skill, index) in filteredSkills"
                     :key="skill.name"
                     :skill="skill.name"
-                    :icon="VueIcon"
+                    :icon="skill.icon"
                     class="skill-card"
                     :style="{ animationDelay: `${index * 100}ms` }"
                 />
