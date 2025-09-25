@@ -1,12 +1,17 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
 import SkillCard from "./SkillCard.vue";
-import VueIcon from "../assets/icons/vue.svg?component"
 
-// Backend
-import NodeJSIcon from "../assets/icons/nodejs.svg?component"
-import TypeScriptIcon from '../assets/icons/typescript.svg?component'
-import PythonIcon from '../assets/icons/python.svg?component'
+const icons = import.meta.glob("../assets/icons/*.svg", {
+  import: "default",
+  eager: true,
+});
+
+function getIcon(name: string) {
+  // matches "../assets/icons/nodejs.svg"
+  const key = `../assets/icons/${name}.svg`;
+  return icons[key];
+}
 
 // the currently selected category
 const selected = ref("Backend");
@@ -16,33 +21,32 @@ const categories = ["Backend", "Frontend", "DevOps", "Practices", "Tools"];
 
 
 const skills = [
-  { name: "Node.js", category: "Backend", icon: NodeJSIcon },
-  { name: "TypeScript", category: "Backend", icon: TypeScriptIcon },
-  { name: "Python", category: "Backend", icon: PythonIcon },
-  { name: "SQL", category: "Backend", icon: VueIcon },
-  { name: "PostgreSQL", category: "Backend", icon: "VueIcon" },
-  { name: "REST APIs", category: "Backend", icon: "VueIcon" },
+  { name: "Node.js", category: "Backend", icon: getIcon("nodejs") },
+  { name: "TypeScript", category: "Backend", icon: getIcon("typescript") },
+  { name: "Python", category: "Backend", icon: getIcon("python") },
+  { name: "SQL", category: "Backend", icon: getIcon("sql") },
+  { name: "PostgreSQL", category: "Backend", icon: getIcon("postgresql") },
+  { name: "REST APIs", category: "Backend", icon: getIcon("restapi") },
 
-  { name: "React", category: "Frontend", icon: "VueIcon" },
-  { name: "Next.js", category: "Frontend", icon: "VueIcon" },
-  { name: "HTML5", category: "Frontend", icon: "VueIcon" },
-  { name: "CSS3", category: "Frontend", icon: "VueIcon" },
-  { name: "TailwindCSS", category: "Frontend", icon: "VueIcon" },
-  { name: "Vue", category: "Frontend", icon: VueIcon },
-  { name: "Responsive Design", category: "Frontend", icon: "VueIcon" },
+  { name: "React", category: "Frontend", icon: getIcon("react") },
+  { name: "Next.js", category: "Frontend", icon: getIcon("nextjs") },
+  { name: "HTML5", category: "Frontend", icon: getIcon("html5") },
+  { name: "CSS3", category: "Frontend", icon: getIcon("css3") },
+  { name: "TailwindCSS", category: "Frontend", icon: getIcon("tailwindcss") },
+  { name: "Vue", category: "Frontend", icon: getIcon("vue") },
+  { name: "Responsive Design", category: "Frontend", icon: getIcon("responsive") },
 
-  { name: "Docker", category: "DevOps", icon: "VueIcon" },
-  { name: "Kubernetes", category: "DevOps", icon: "VueIcon" },
+  { name: "Docker", category: "DevOps", icon: getIcon("docker") },
+  { name: "Kubernetes", category: "DevOps", icon: getIcon("kubernetes") },
 
-  { name: "Database Design", category: "Practices", icon: "VueIcon" },
-  { name: "Event Driven Architecture", category: "Practices", icon: "VueIcon" },
-  { name: "Agile", category: "Practices", icon: "VueIcon" },
-  { name: "Scrum", category: "Practices", icon: "VueIcon" },
-  { name: "OOP", category: "Practices", icon: "VueIcon" },
-  { name: "TDD", category: "Practices", icon: "VueIcon" },
+  { name: "Database Design", category: "Practices", icon: getIcon("databasedesign") },
+  { name: "Event Driven Architecture", category: "Practices", icon: getIcon("eventdrivenarchitecture") },
+  { name: "Agile", category: "Practices", icon: getIcon("agile") },
+  { name: "Scrum", category: "Practices", icon: getIcon("scrum") },
+  { name: "OOP", category: "Practices", icon: getIcon("oop") },
+  { name: "TDD", category: "Practices", icon: getIcon("tdd") },
 
-  { name: "Git", category: "Tools", icon: "VueIcon" },
-  { name: "Super long name", category: "Tools", icon: "VueIcon" },
+  { name: "Git", category: "Tools", icon: getIcon("git") },
 ];
 
 // Computed array of skills for the selected category
