@@ -12,7 +12,7 @@
                 <input name="senderEmail" type="text" class="border border-gray-200 rounded-lg h-14 px-4" placeholder="Your Email"></input>
                 <textarea name="message" class="border border-gray-200 rounded-lg my-3 h-52 p-4" placeholder="Your Message"></textarea>
                 <div>
-                    <button type="submit" class="group bg-black rounded-full text-white h-[3rem] w-[8rem] flex items-center justify-center hover:scale-110 gap-2 transition-all">Submit
+                    <button type="submit" class="cursor-not-allowed group bg-black rounded-full text-white h-[3rem] w-[8rem] flex items-center justify-center hover:scale-110 gap-2 transition-all">Submit
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" 
                         class="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" 
                         height="1em" 

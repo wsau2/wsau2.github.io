@@ -7,17 +7,18 @@ const icons = import.meta.glob("../assets/icons/*.svg", {
   eager: true,
 });
 
-function getIcon(name: string) {
+function getIcon(name: string):string {
   // matches "../assets/icons/nodejs.svg"
   const key = `../assets/icons/${name}.svg`;
-  return icons[key];
+  return icons[key] as string;
 }
 
 // the currently selected category
 const selected = ref("Backend");
 
 // categories to render
-const categories = ["Backend", "Frontend", "DevOps", "Practices", "Tools"];
+const categories = ["Backend", "Frontend", "Practices", "Tools"];
+// const categories = ["Backend", "Frontend", "DevOps", "Practices", "Tools"];
 
 
 const skills = [
@@ -47,6 +48,10 @@ const skills = [
   { name: "TDD", category: "Practices", icon: getIcon("tdd") },
 
   { name: "Git", category: "Tools", icon: getIcon("git") },
+  { name: "Github", category: "Tools", icon: getIcon("github") },
+  { name: "macOS", category: "Tools", icon: getIcon("macos") },
+  { name: "Windows", category: "Tools", icon: getIcon("windows") },
+  { name: "Railway", category: "Tools", icon: getIcon("railway") },
 ];
 
 // Computed array of skills for the selected category
