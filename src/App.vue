@@ -7,6 +7,7 @@ import Projects from './components/Projects.vue';
 import Skills from './components/Skills.vue';
 import Contact from './components/Contact.vue';
 import { onMounted } from 'vue';
+import Dock from './components/Dock.vue';
 
 onMounted(() => {
   requestAnimationFrame(() => {
@@ -29,6 +30,7 @@ onMounted(() => {
     <Skills class="fade-blur"/>
     <Contact class="fade-blur"/>
   </main>
+  <Dock/>
 </template>
 
 <style scoped>
